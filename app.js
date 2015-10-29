@@ -1,12 +1,43 @@
 $(document).ready(function () {
 
+	$("#main").hide();
+
+	$(document).on("click", "body", function(event) {
+    	$("#main").show();
+    	$("#origin").hide();
+	});
+
+	// --------------------------------------------
+
 	var geoData;
 	var address;
+	var thing;
 
 	$(document).on("click", "#pizza", function(event) {
-		
+
+		thing = "pizza";
 		get_geolocation();
-		
+
+	});
+
+	$(document).on("click", "#burrito", function(event) {
+
+		thing = "burrito";
+		get_geolocation();
+
+	});
+
+	$(document).on("click", "#sushi", function(event) {
+
+		thing = "sushi";
+		get_geolocation();
+
+	});
+
+	$(document).on("click", "#coffee", function(event) {
+
+		thing = "coffee";
+		get_geolocation();
 
 	});
 
@@ -52,7 +83,7 @@ $(document).ready(function () {
 			oauth_consumer_secret: auth.consumerSecret,
 			oauth_token: auth.accessToken,
 			sort: 1,
-			term: "pizza"
+			term: thing,
 		}
 
 		var message = {
@@ -74,13 +105,14 @@ $(document).ready(function () {
 				console.log(data.businesses[0].location.address);
 				address = data.businesses[0].location.address;
 
-				window.location = "http://maps.apple.com/?dirflg=d&daddr=" + address + "&saddr=" + geoData;
+				get_directions();
 			} 
 		});
 	}
 
+	// go to directions
 	function get_directions() {
-        $("a[href='#']").attr('href', "http://maps.apple.com/?dirflg=d&daddr=" + address + "&saddr=" + geoData);
+        window.location = "http://maps.apple.com/?dirflg=d&daddr=" + address + "&saddr=" + geoData;
 
     }
 
