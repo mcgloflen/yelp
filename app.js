@@ -4,10 +4,9 @@ $(document).ready(function () {
 	var address;
 
 	$(document).on("click", "#pizza", function(event) {
-
 		
 		get_geolocation();
-
+		
 
 	});
 
@@ -75,7 +74,7 @@ $(document).ready(function () {
 				console.log(data.businesses[0].location.address);
 				address = data.businesses[0].location.address;
 
-				get_directions();
+				window.location = "http://maps.apple.com/?dirflg=d&daddr=" + address + "&saddr=" + geoData;
 			} 
 		});
 	}
