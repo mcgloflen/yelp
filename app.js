@@ -2,8 +2,11 @@ $(document).ready(function () {
 
 	var lat;
 	var lon;
-
+	var geoData;
 	var locationValue;
+
+	var address;
+
 
 	$(document).on("click", "#get-location", function(event) {
 
@@ -16,9 +19,7 @@ $(document).ready(function () {
 				lat = position.coords.latitude;
 				lon = position.coords.longitude;
 
-				var geoData = {
-					ll: lat + "," + lon
-				}
+				geoData = lat + "," + lon;
 				
 				yelp_request_geo();
 			});
@@ -38,7 +39,7 @@ $(document).ready(function () {
 	});
 
 	// get yelp stuff
-	function yelp_request_form(i,j) {
+	function yelp_request_form() {
 		var auth = {
 			consumerKey : "a9CE7NcYGv_cNYPiVNYGmg",
 			consumerSecret : "JgbtCV4ztDIS5w47pnV8QrWqnH4",
@@ -79,7 +80,8 @@ $(document).ready(function () {
 			dataType : 'jsonp',
 			jsonpCallback : 'cb',
 			success : function(data) {
-				console.log(data);
+				console.log(data.businesses[0].location.address);
+				address = data.businesses[0].location.address;
 			} 
 		});
 	}
@@ -102,8 +104,7 @@ $(document).ready(function () {
 		var parameters = {
 			callback: "cb",
 			limit: 1,
-			ll: lat + "," + lon,
-			// location: formData,
+			ll: geoData,
 			oauth_consumer_key: auth.consumerKey,
 			oauth_consumer_secret: auth.consumerSecret,
 			oauth_token: auth.accessToken,
@@ -127,10 +128,18 @@ $(document).ready(function () {
 			dataType : 'jsonp',
 			jsonpCallback : 'cb',
 			success : function(data) {
-				console.log(data);
+				console.log(data.businesses[0].location.address);
+				address = data.businesses[0].location.address;
 			} 
 		});
 	}
+
+	$(document).on("click", "#directions-url", function(event) {
+
+        $("a[href='#']").attr('href', "http://maps.apple.com/?dirflg=d&daddr=" + address + "&saddr=" + geoData);
+
+	});
+
 
 
 });
