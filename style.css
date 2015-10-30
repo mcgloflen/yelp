@@ -30,7 +30,6 @@ body {
 	text-align: center;
 	width: 100%;
 	height: 15%;
-	padding: 0;
 	margin: 0;
 }
 
@@ -47,6 +46,8 @@ body {
 .btn {
 	width: 100%;
 	height: 100%;
+	color: purple;
+	font-size: 30px;
 }
 
 .tab-content {
@@ -84,7 +85,7 @@ h1 {
 	text-align: center;
 }
 
-.button-font {
-	font-size: 2em;
+.col-xs-6 {
+	padding: 0;
+	margin: 0;
 }
-
