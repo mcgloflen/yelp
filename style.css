@@ -76,10 +76,15 @@ body {
 
 #nabs span {
 	font-size: 4vh;
+	padding-top: 20px;
 }
 
 h1 {
 	color: white;
 	text-align: center;
+}
+
+.button-font {
+	font-size: 2em;
 }
 
