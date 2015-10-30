@@ -20,6 +20,10 @@ h1 {
 	color: white;
 }*/
 
+body {
+    overflow-x: hidden; 
+}
+
 #nabs {
 	position: absolute;
 	bottom: 0px;
@@ -27,6 +31,7 @@ h1 {
 	width: 100%;
 	height: 15%;
 	padding: 0;
+	margin: 0;
 }
 
 #nabs div {
@@ -72,3 +77,9 @@ h1 {
 #nabs span {
 	font-size: 4vh;
 }
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
