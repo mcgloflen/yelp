@@ -10,34 +10,47 @@
 </head>
 <body>
 
-	<div id="origin" class="origin">
-		<h1>Lazy Yelp</h1>
+
+
+
+	<div class="top">
+		<p>Click for directions to...</p>
 	</div>
 
-<div id="main" class="container-fluid">
-	<div class="row">
-		<div class="col-xs-6">
-			<button id="pizza" class="btn btn-default">Pizza</button>
+	<div id="tab1" class="tab-content">
+		<div class="row">
+			<div class="col-xs-6">
+				<button id="pizza" class="btn btn-default">Pizza</button>
+			</div>
+			<div class="col-xs-6">
+				<button id="sushi" class="btn btn-default">Sushi</button>
+			</div>
 		</div>
-		<div class="col-xs-6">
-			<button id="sushi" class="btn btn-default">Sushi</button>
+		<div class="row">
+			<div class="col-xs-6">
+				<button id="coffee" class="btn btn-default">Coffee</button>
+			</div>
+			<div class="col-xs-6">
+				<button id="burrito" class="btn btn-default">Burrito</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<button id="coffee" class="btn btn-default">Coffee</button>
+			</div>
+			<div class="col-xs-6">
+				<button id="burrito" class="btn btn-default">Burrito</button>
+			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-xs-6">
-			<button id="coffee" class="btn btn-default">Coffee</button>
-		</div>
-		<div class="col-xs-6">
-			<button id="burrito" class="btn btn-default">Burrito</button>
-		</div>
+	<div id="tab2" class="tab-content">content 2</div>
+	<div id="tab3" class="tab-content">content 3</div>
+
+	<div class="row" id="nabs">
+		<a href="#tab1"><div class="col-xs-4"><span class="glyphicon glyphicon-home"></span></div></a>
+		<a href="#tab2"><div class="col-xs-4"><span class="glyphicon glyphicon-cutlery"></span></div></a>
+		<a href="#tab3"><div class="col-xs-4"><span class="glyphicon glyphicon-sunglasses"></span></div></a>
 	</div>
-	<div class="row">
-		<div class="col-xs-6">
-		</div>
-		<div class="col-xs-6">
-		</div>
-	</div>
-</div>
 
 
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>

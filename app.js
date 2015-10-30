@@ -1,14 +1,26 @@
 $(document).ready(function () {
 
-	$("#main").hide();
+	// $("#main").hide();
 
-	$(document).on("click", "body", function(event) {
-    	$("#main").show();
-    	$("#origin").hide();
-	});
+	// $(document).on("click", "body", function(event) {
+ //    	$("#main").show();
+ //    	$("#origin").hide();
+	// });
 
 	// --------------------------------------------
 
+	// nav pills
+	$("#tab2").hide();
+	$("#tab3").hide();
+
+	$(document).on("click", "#nabs a", function(event) {
+		event.preventDefault();
+		$('*[id^="tab"]').hide();
+		$(this.hash).show();
+	});
+
+
+	// geo/yelp buttons functionality
 	var geoData;
 	var address;
 	var thing;
