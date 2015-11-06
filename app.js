@@ -17,87 +17,23 @@ $(document).ready(function () {
 		event.preventDefault();
 		$('*[id^="tab"]').hide();
 		$(this.hash).show();
+
+		$(".col-xs-4").removeClass("active");
+		$(".col-xs-4").addClass("not-active");
+
+		$((this).children).addClass("active");
+		$((this).children).removeClass("not-active");
 	});
 
-
-	// $(document).on("click", "button", function(event) {
-	// 	function test(
-	// });
 
 	// geo/yelp buttons functionality
 	var geoData;
 	var address;
 	var thing;
 
-	$(document).on("click", "#innout", function(event) {
-
-		thing = "innout";
+	$(document).on("click", "#tab1 button", function(event) {
+		thing = this.id;
 		get_geolocation();
-
-	});
-
-	$(document).on("click", "#italian", function(event) {
-
-		thing = "italian";
-		get_geolocation();
-
-	});
-
-
-	$(document).on("click", "#chinese", function(event) {
-
-		thing = "chinese";
-		get_geolocation();
-
-	});
-
-	$(document).on("click", "#gas", function(event) {
-
-		thing = "gas";
-		get_geolocation();
-
-	});
-
-	$(document).on("click", "#7-eleven", function(event) {
-
-		thing = "7eleven";
-		get_geolocation();
-
-	});
-
-	$(document).on("click", "#mexican", function(event) {
-
-		thing = "mexican";
-		get_geolocation();
-
-	});
-
-	$(document).on("click", "#pizza", function(event) {
-
-		thing = "pizza";
-		get_geolocation();
-
-	});
-
-	$(document).on("click", "#japanese", function(event) {
-
-		thing = "japanese";
-		get_geolocation();
-
-	});
-
-	$(document).on("click", "#sushi", function(event) {
-
-		thing = "sushi";
-		get_geolocation();
-
-	});
-
-	$(document).on("click", "#coffee", function(event) {
-
-		thing = "coffee";
-		get_geolocation();
-
 	});
 
 	// get geolocation
