@@ -1,14 +1,5 @@
 $(document).ready(function () {
 
-	// $("#main").hide();
-
-	// $(document).on("click", "body", function(event) {
- //    	$("#main").show();
- //    	$("#origin").hide();
-	// });
-
-	// --------------------------------------------
-
 	// nav pills
 	$("#tab2").hide();
 	$("#tab3").hide();
@@ -25,13 +16,13 @@ $(document).ready(function () {
 		$((this).children).removeClass("not-active");
 	});
 
-
 	// geo/yelp buttons functionality
 	var geoData;
 	var address;
 	var thing;
+	var businessName;
 
-	$(document).on("click", "#tab1 button", function(event) {
+	$(document).on("click", "button", function(event) {
 		thing = this.id;
 		get_geolocation();
 	});
@@ -98,7 +89,7 @@ $(document).ready(function () {
 			dataType : 'jsonp',
 			jsonpCallback : 'cb',
 			success : function(data) {
-				console.log(data.businesses[0].location.address);
+				businessName = data.businesses[0].name;
 				address = data.businesses[0].location.address;
 
 				get_directions();
@@ -108,8 +99,7 @@ $(document).ready(function () {
 
 	// go to directions
 	function get_directions() {
-        window.location = "http://maps.apple.com/?dirflg=d&daddr=" + address + "&saddr=" + geoData;
-
+        window.location = "http://maps.apple.com/?dirflg=d&daddr=" + address + "&saddr=" + geoData + "&q=" + name;
     }
 
 });
