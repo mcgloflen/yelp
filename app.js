@@ -72,6 +72,7 @@ $(document).ready(function () {
 
 		var parameters = {
 			callback: "cb",
+			is_closed: false,
 			limit: 1,
 			ll: geoData,
 			oauth_consumer_key: auth.consumerKey,
@@ -101,7 +102,7 @@ $(document).ready(function () {
 				address = data.businesses[0].location.address;
 
 				get_directions();
-			} 
+			}, 
 		});
 	}
 

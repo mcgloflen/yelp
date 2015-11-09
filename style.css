@@ -38,6 +38,8 @@ body {
 	display: flex;
   	justify-content: center;
   	font-size: 5vh;
+  	border-top: 1px solid black;
+
 }
 
 #nabs a {
@@ -49,7 +51,8 @@ body {
 	height: 100%;
 	color: black;
 	font-size: 75px;
-	background-color: red;
+	background-color: yellow;
+	border: 1px solid black;
 }
 
 .tab-content {
@@ -67,6 +70,8 @@ body {
 
 .col-xs-6 {
 	height: 100%;
+	padding: 0;
+	margin: 0;
 }
 
 .top {
@@ -84,27 +89,28 @@ body {
 }
 
 h1 {
-	color: white;
+	color: yellow;
 	text-align: center;
 	align-self: center;
-	font-size: 4vh;
+	font-size: 5vh;
 }
 
-.col-xs-6 {
-	padding: 0;
-	margin: 0;
+.header-right {
+	background-color: yellow;
+	color: black;
 }
 
 .active {
 	color: black;
-	background-color: red;
+	background-color: yellow;
 }
 
 .not-active {
-	color: white;
+	color: yellow;
 	background-color: black;
 }
 
 .row {
 	background-color: black;
 }
+
