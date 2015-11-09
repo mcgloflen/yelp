@@ -119,6 +119,7 @@ body {
         top: 150px;
         left: 50%;
         right: 50%;
+        font-size: 2vw
     }
     #large {
     	visibility: visible;
