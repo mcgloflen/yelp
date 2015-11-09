@@ -21,7 +21,8 @@ h1 {
 }*/
 
 body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    font-family: fredoka one; 
 }
 
 #nabs {
@@ -50,7 +51,7 @@ body {
 	width: 100%;
 	height: 100%;
 	color: black;
-	font-size: 75px;
+	font-size: 5vh;
 	background-color: yellow;
 	border: 1px solid black;
 }
@@ -92,12 +93,7 @@ h1 {
 	color: yellow;
 	text-align: center;
 	align-self: center;
-	font-size: 5vh;
-}
-
-.header-right {
-	background-color: yellow;
-	color: black;
+	font-size: 5vw;
 }
 
 .active {
@@ -114,3 +110,23 @@ h1 {
 	background-color: black;
 }
 
+@media screen and (min-width: 1024px) {
+    body {
+        visibility: hidden;
+        background-color: black;
+        color: yellow;
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        right: 50%;
+    }
+    #large {
+    	visibility: visible;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #large {
+        visibility: hidden;
+    }
+}
