@@ -40,10 +40,10 @@ $(document).ready(function () {
 	// get yelp stuff
 	function yelp_request_form(i,j) {
 		var auth = {
-			consumerKey : "a9CE7NcYGv_cNYPiVNYGmg",
-			consumerSecret : "JgbtCV4ztDIS5w47pnV8QrWqnH4",
-			accessToken : "ePiKwaMH7GKZd4R7AP1kRq63toU7cb5b",
-			accessTokenSecret : "AISY29-YY_yEQy3WxggaIkGvoWU",
+			consumerKey : "g",
+			consumerSecret : "",
+			accessToken : "",
+			accessTokenSecret : "",
 			signatureMethod : "HMAC-SHA1"
 		};
 
@@ -87,10 +87,10 @@ $(document).ready(function () {
 	// get yelp stuff
 	function yelp_request_geo() {
 		var auth = {
-			consumerKey : "a9CE7NcYGv_cNYPiVNYGmg",
-			consumerSecret : "JgbtCV4ztDIS5w47pnV8QrWqnH4",
-			accessToken : "ePiKwaMH7GKZd4R7AP1kRq63toU7cb5b",
-			accessTokenSecret : "AISY29-YY_yEQy3WxggaIkGvoWU",
+			consumerKey : "",
+			consumerSecret : "",
+			accessToken : "",
+			accessTokenSecret : "",
 			signatureMethod : "HMAC-SHA1"
 		};
 
